@@ -11,6 +11,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SidebarPageComponent } from './sidebar-page/sidebar-page.component';
 import { WrapperPageComponent } from './wrapper-page/wrapper-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,15 @@ import { WrapperPageComponent } from './wrapper-page/wrapper-page.component';
     SidebarPageComponent,
     WrapperPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    HttpClientModule,
+    Ng2SearchPipeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
