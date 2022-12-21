@@ -9,7 +9,7 @@ import { EmployeeService } from './employee.service';
   styleUrls: ['./employee-page.component.scss'],
 })
 export class EmployeePageComponent implements OnInit {
-  title = 'pagination';
+  title: any;
   listData: any;
   page: number = 1;
   count: number = 0;

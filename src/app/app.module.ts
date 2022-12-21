@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SearchEmployeePipe } from './employee-page/search-employee.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     LoginPageComponent,
     SidebarPageComponent,
     WrapperPageComponent,
+    SearchEmployeePipe,
   ],
   imports: [
     BrowserModule,
