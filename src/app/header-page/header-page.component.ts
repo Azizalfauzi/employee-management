@@ -18,4 +18,7 @@ export class HeaderPageComponent implements OnInit {
   goEmployeePage() {
     this.router.navigateByUrl('/dashboard/employee');
   }
+  goLogoutPage() {
+    this.router.navigateByUrl('/login');
+  }
 }
