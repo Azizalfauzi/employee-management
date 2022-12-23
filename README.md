@@ -9,10 +9,7 @@ Lakukan pull pada project checkout master.
 Jalankan project menggunakan perintah di cmd ng serve --o --port 4300 (port 4300 bisa dirubah sesuai keinginan)
 
 ## Berikut Tampilan Aplikasi Employee
-![Screenshot (328)](https://user-images.githubusercontent.com/50761836/209298514-e11f11cd-5f33-46a1-84a6-630b80a9fc1c.png)
-![Screenshot (327)](https://user-images.githubusercontent.com/50761836/209298540-fbda9979-54f3-4cd1-8aef-5f3772da0147.png)
-![Screenshot (326)](https://user-images.githubusercontent.com/50761836/209298542-1b328e08-4310-489c-aed7-48249c716f76.png)
-![Screenshot (325)](https://user-images.githubusercontent.com/50761836/209298554-6da156b0-4f70-4eb7-a61c-67383e1e6e00.png)
+
 
 ## Development server
 
