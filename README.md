@@ -16,12 +16,12 @@ Berikut adalah halaman home :
 Berikut adalah halaman Employee :
 ![employee](https://user-images.githubusercontent.com/50761836/209299376-413026f4-1edd-46e3-aad6-23e9b8eb0979.png)
 Berikut adalah notif Edit dan Delete:
-![delete](https://user-images.githubusercon
-![edit](https://user-images.githubusercontent.co
+
 Berikut adalah halaman detail:
 ![detail](https://user-images.githubusercontent.com/50761836/209299588-1a1ed6be-f834-4f4b-a68c-aa226e11a397.png)
-m/50761836/209299516-ed6112f1-b5fe-4ec7-b305-e7409f17692b.png)
-tent.com/50761836/209299497-679f6e1a-3b75-45ef-8200-0e3bce055670.png)
+
+Berikut adalah halaman tambah employee:
+
 
 
 
