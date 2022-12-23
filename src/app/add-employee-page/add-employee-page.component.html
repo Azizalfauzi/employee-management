@@ -93,7 +93,7 @@
                             ?.hasError('minlength')
                         "
                         class="text-danger"
-                        >Min minLength 5 !</small
+                        >Min minLength 3 !</small
                       >
                     </div>
                   </div>
@@ -130,7 +130,7 @@
                               ?.hasError('minlength')
                           "
                           class="text-danger"
-                          >Min minLength 5 !</small
+                          >Min minLength 3 !</small
                         >
                       </div>
                     </div>
@@ -265,6 +265,7 @@
                     >
                   </div>
                 </div>
+
                 <!-- input Group validation -->
                 <div class="form-group">
                   <label>Group</label>
@@ -323,12 +324,47 @@
                     </div>
                   </div> -->
                 </div>
+                <!-- input Status validation -->
+                <div class="form-group">
+                  <label>Deskripsi</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter description"
+                    formControlName="description"
+                    [class.is-invalid]="
+                      formAddEmployee.get('description')?.invalid &&
+                      formAddEmployee.get('description')?.touched
+                    "
+                  />
+                  <div
+                    *ngIf="
+                      (formAddEmployee.get('description')?.invalid &&
+                        formAddEmployee.get('description')?.touched) ||
+                      formAddEmployee.get('description')?.dirty
+                    "
+                  >
+                    <small
+                      *ngIf="formAddEmployee.get('description')?.errors?.['required']"
+                      class="text-danger"
+                      >description is required !</small
+                    >
+                    <!--question mark(?) is a safe navigation operator-->
+                    <small
+                      *ngIf="
+                        formAddEmployee.get('status')?.hasError('minlength')
+                      "
+                      class="text-danger"
+                      >Min minLength 2 !</small
+                    >
+                  </div>
+                </div>
               </div>
               <div class="card-footer">
                 <button
                   type="submit"
                   [disabled]="!formAddEmployee.valid"
-                  (click)="goEmployeePage()"
+                  (click)="addData()"
                   class="btn btn-primary"
                 >
                   Submit

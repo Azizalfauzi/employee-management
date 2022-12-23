@@ -89,4 +89,5 @@ export class EmployeePageComponent implements OnInit {
       text: 'Apakah anda yakin menghapus data ini ?',
     });
   }
+
 }

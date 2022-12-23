@@ -518,10 +518,95 @@ export class EmployeeService {
         group: 23,
         description: 'adalah seorang pengembang mobile security',
       },
+      {
+        username: 47,
+        firstName: 'Chi',
+        lastName: 'Chi Setiawan',
+        email: 'chisetiawan@gmail.com',
+        birthDate: '20 Juli 1996',
+        basicSalary: 5150000,
+        status: 'Pegawai',
+        group: 23,
+        description: 'adalah seorang pengembang cloud computing',
+      },
+      {
+        username: 48,
+        firstName: 'Psi',
+        lastName: 'Psi Wijaya',
+        email: 'psiwijaya@gmail.com',
+        birthDate: '17 Mei 1995',
+        basicSalary: 5250000,
+        status: 'Pegawai',
+        group: 24,
+        description: 'adalah seorang pengembang data mining',
+      },
+      {
+        username: 49,
+        firstName: 'Omega',
+        lastName: 'Omega Amalia',
+        email: 'omegaamalia@gmail.com',
+        birthDate: '30 Desember 1999',
+        basicSalary: 5350000,
+        status: 'Pegawai',
+        group: 24,
+        description: 'adalah seorang pengembang machine learning',
+      },
+      {
+        username: 50,
+        firstName: 'Alpha',
+        lastName: 'Alpha Putra',
+        email: 'alphaputra@gmail.com',
+        birthDate: '11 Agustus 1997',
+        basicSalary: 5450000,
+        status: 'Pegawai',
+        group: 25,
+        description: 'adalah seorang pengembang deep learning',
+      },
+      {
+        username: 51,
+        firstName: 'Beta',
+        lastName: 'Beta Hasanah',
+        email: 'betahasanah@gmail.com',
+        birthDate: '20 Mei 1994',
+        basicSalary: 5550000,
+        status: 'Pegawai',
+        group: 25,
+        description: 'adalah seorang pengembang artificial intelligence',
+      },
+      {
+        username: 52,
+        firstName: 'Gamma',
+        lastName: 'Gamma Nugraha',
+        email: 'gammanugraha@gmail.com',
+        birthDate: '17 Januari 1993',
+        basicSalary: 5650000,
+        status: 'Pegawai',
+        group: 26,
+        description: 'adalah seorang pengembang natural language generation',
+      },
+      {
+        username: 53,
+        firstName: 'Delta',
+        lastName: 'Delta Rahayu',
+        email: 'deltarahayu@gmail.com',
+        birthDate: '22 Desember 2000',
+        basicSalary: 5750000,
+        status: 'Pegawai',
+        group: 26,
+        description: 'adalah seorang pengembang natural language processing',
+        },
     ],
   };
   // get fake data with observable
   getAllPost(): Observable<any> {
     return of(this.data.employee);
+  }
+  postData(data: any): void {
+    if (data) {
+      this.data.employee.push(data);
+      console.log(this.data.employee);
+    } else {
+      console.log('Gagal insert data');
+    }
   }
 }
