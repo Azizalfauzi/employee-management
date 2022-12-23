@@ -7,31 +7,43 @@
     <div class="card">
       <div class="card-body login-card-body">
         <p class="login-box-msg">Sign in to start your session</p>
-
+        <!-- inisiasi form login -->
         <form
           [formGroup]="formLogin"
           class="md-float-material form-material"
           action="javascript:"
         >
-          <div class="input-group mb-3">
+          <!-- input validasi username -->
+          <div class="input-group mb-2">
             <input
               type="text"
               name="username"
               formControlName="username"
               class="form-control"
               placeholder="Username"
+              [class.is-invalid]="
+                formLogin.get('username')?.invalid &&
+                formLogin.get('username')?.touched
+              "
             />
-            <label
-              *ngIf=""
-              class="invalid-feedback"
-              >Silahkan memilih fakultas</label
-            >
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
               </div>
             </div>
           </div>
+          <div
+            *ngIf="(userName?.invalid && userName?.touched) || userName?.dirty"
+          >
+            <small *ngIf="userName?.errors?.['required']" class="text-danger"
+              >Username is required !</small
+            >
+            <!--question mark(?) is a safe navigation operator-->
+            <small *ngIf="userName?.hasError('minlength')" class="text-danger"
+              >Min minLength 5 !</small
+            >
+          </div>
+           <!-- input validasi password -->
           <div class="input-group mb-3">
             <input
               type="password"
@@ -39,12 +51,27 @@
               placeholder="Password"
               formControlName="password"
               name="password"
+              [class.is-invalid]="
+                formLogin.get('password')?.invalid &&
+                formLogin.get('password')?.touched
+              "
             />
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
               </div>
             </div>
+          </div>
+          <div
+            *ngIf="(passWord?.invalid && passWord?.touched) || passWord?.dirty"
+          >
+            <small *ngIf="passWord?.errors?.['required']" class="text-danger"
+              >Password is required !</small
+            >
+            <!--question mark(?) is a safe navigation operator-->
+            <small *ngIf="passWord?.hasError('minlength')" class="text-danger"
+              >Min minLength 5 !</small
+            >
           </div>
           <div class="row">
             <div class="col-12">

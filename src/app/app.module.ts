@@ -16,6 +16,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchEmployeePipe } from './employee-page/search-employee.pipe';
+import { DetailEmployeePageComponent } from './detail-employee-page/detail-employee-page.component';
+import { AddEmployeePageComponent } from './add-employee-page/add-employee-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { SearchEmployeePipe } from './employee-page/search-employee.pipe';
     SidebarPageComponent,
     WrapperPageComponent,
     SearchEmployeePipe,
+    DetailEmployeePageComponent,
+    AddEmployeePageComponent,
   ],
   imports: [
     BrowserModule,

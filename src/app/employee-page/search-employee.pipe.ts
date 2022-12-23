@@ -4,6 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'searchEmployee',
 })
 export class SearchEmployeePipe implements PipeTransform {
+  // pipe filter function untuk table
   transform(value: any, args?: any): any {
     if (!value) return null;
     if (!args) return null;

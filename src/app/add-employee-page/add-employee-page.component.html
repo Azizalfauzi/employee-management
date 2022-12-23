@@ -1,0 +1,349 @@
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Add Employee Page</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Add employee</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <!-- inisiasi form  -->
+            <form
+              [formGroup]="formAddEmployee"
+              class="md-float-material form-material"
+              action="javascript:"
+            >
+              <div class="card-body">
+                <!-- input username with validation -->
+                <div class="form-group">
+                  <label>Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter username"
+                    formControlName="username"
+                    [class.is-invalid]="
+                      formAddEmployee.get('username')?.invalid &&
+                      formAddEmployee.get('username')?.touched
+                    "
+                  />
+                  <div
+                    *ngIf="
+                      (formAddEmployee.get('username')?.invalid &&
+                        formAddEmployee.get('username')?.touched) ||
+                      formAddEmployee.get('username')?.dirty
+                    "
+                  >
+                    <small
+                      *ngIf="formAddEmployee.get('username')?.errors?.['required']"
+                      class="text-danger"
+                      >Username is required !</small
+                    >
+                    <!--question mark(?) is a safe navigation operator-->
+                    <small
+                      *ngIf="
+                        formAddEmployee.get('username')?.hasError('minlength')
+                      "
+                      class="text-danger"
+                      >Min minLength 5 !</small
+                    >
+                  </div>
+                </div>
+                <!-- input firstname dan lastname with validation -->
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter first name"
+                        formControlName="firstName"
+                        [class.is-invalid]="
+                          formAddEmployee.get('firstName')?.invalid &&
+                          formAddEmployee.get('firstName')?.touched
+                        "
+                      />
+                    </div>
+                    <div
+                      *ngIf="
+                        (formAddEmployee.get('firstName')?.invalid &&
+                          formAddEmployee.get('firstName')?.touched) ||
+                        formAddEmployee.get('firstName')?.dirty
+                      "
+                    >
+                      <small
+                        *ngIf="formAddEmployee.get('firstName')?.errors?.['required']"
+                        class="text-danger"
+                        >First name is required !</small
+                      >
+                      <!--question mark(?) is a safe navigation operator-->
+                      <small
+                        *ngIf="
+                          formAddEmployee
+                            .get('firstName')
+                            ?.hasError('minlength')
+                        "
+                        class="text-danger"
+                        >Min minLength 5 !</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label>Last Name</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Enter last name "
+                        formControlName="lastName"
+                        [class.is-invalid]="
+                          formAddEmployee.get('lastName')?.invalid &&
+                          formAddEmployee.get('lastName')?.touched
+                        "
+                      />
+                      <div
+                        *ngIf="
+                          (formAddEmployee.get('lastName')?.invalid &&
+                            formAddEmployee.get('lastName')?.touched) ||
+                          formAddEmployee.get('lastName')?.dirty
+                        "
+                      >
+                        <small
+                          *ngIf="formAddEmployee.get('lastName')?.errors?.['required']"
+                          class="text-danger"
+                          >Last Name is required !</small
+                        >
+                        <!--question mark(?) is a safe navigation operator-->
+                        <small
+                          *ngIf="
+                            formAddEmployee
+                              .get('lastName')
+                              ?.hasError('minlength')
+                          "
+                          class="text-danger"
+                          >Min minLength 5 !</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- input email with validation -->
+                <div class="form-group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter email address"
+                    formControlName="email"
+                    [class.is-invalid]="
+                      formAddEmployee.get('email')?.invalid &&
+                      formAddEmployee.get('email')?.touched
+                    "
+                  />
+                  <div
+                    *ngIf="
+                      (formAddEmployee.get('email')?.invalid &&
+                        formAddEmployee.get('email')?.touched) ||
+                      formAddEmployee.get('email')?.dirty
+                    "
+                  >
+                    <small
+                      *ngIf="formAddEmployee.get('email')?.errors?.['required']"
+                      class="text-danger"
+                      >Email is required !</small
+                    >
+                    <!--question mark(?) is a safe navigation operator-->
+                    <small
+                      *ngIf="formAddEmployee.get('email')?.hasError('pattern')"
+                      class="text-danger"
+                      >Please provide a valid email address !</small
+                    >
+                  </div>
+                </div>
+                <!-- input date with validation -->
+                <div class="form-group">
+                  <label>Birth Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    placeholder="Select birt date"
+                    formControlName="birthDate"
+                    [class.is-invalid]="
+                      formAddEmployee.get('birthDate')?.invalid &&
+                      formAddEmployee.get('birthDate')?.touched
+                    "
+                  />
+                  <div
+                    *ngIf="
+                      (formAddEmployee.get('birthDate')?.invalid &&
+                        formAddEmployee.get('birthDate')?.touched) ||
+                      formAddEmployee.get('birthDate')?.dirty
+                    "
+                  >
+                    <small
+                      *ngIf="formAddEmployee.get('birthDate')?.errors?.['required']"
+                      class="text-danger"
+                      >Birthdate is required !</small
+                    >
+                  </div>
+                </div>
+                <!-- input basic salary validation -->
+                <div class="form-group">
+                  <label>Basic Salary</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter salary"
+                    formControlName="basicSalary"
+                    [class.is-invalid]="
+                      formAddEmployee.get('basicSalary')?.invalid &&
+                      formAddEmployee.get('basicSalary')?.touched
+                    "
+                  />
+                  <div
+                    *ngIf="
+                      (formAddEmployee.get('basicSalary')?.invalid &&
+                        formAddEmployee.get('basicSalary')?.touched) ||
+                      formAddEmployee.get('basicSalary')?.dirty
+                    "
+                  >
+                    <small
+                      *ngIf="formAddEmployee.get('basicSalary')?.errors?.['required']"
+                      class="text-danger"
+                      >Basic Salary is required !</small
+                    >
+                    <!-- <small
+                      *ngIf="
+                        formAddEmployee.get('basicSalary')?.hasError('pattern')
+                      "
+                      class="text-danger"
+                      >Please provide number !</small
+                    > -->
+                  </div>
+                </div>
+                <!-- input Status validation -->
+                <div class="form-group">
+                  <label>Status</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Status"
+                    formControlName="status"
+                    [class.is-invalid]="
+                      formAddEmployee.get('status')?.invalid &&
+                      formAddEmployee.get('status')?.touched
+                    "
+                  />
+                  <div
+                    *ngIf="
+                      (formAddEmployee.get('status')?.invalid &&
+                        formAddEmployee.get('status')?.touched) ||
+                      formAddEmployee.get('status')?.dirty
+                    "
+                  >
+                    <small
+                      *ngIf="formAddEmployee.get('status')?.errors?.['required']"
+                      class="text-danger"
+                      >Status is required !</small
+                    >
+                    <!--question mark(?) is a safe navigation operator-->
+                    <small
+                      *ngIf="
+                        formAddEmployee.get('status')?.hasError('minlength')
+                      "
+                      class="text-danger"
+                      >Min minLength 2 !</small
+                    >
+                  </div>
+                </div>
+                <!-- input Group validation -->
+                <div class="form-group">
+                  <label>Group</label>
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Type to search..."
+                    formControlName="group"
+                    [class.is-invalid]="
+                      formAddEmployee.get('group')?.invalid &&
+                      formAddEmployee.get('group')?.touched
+                    "
+                  />
+                  <datalist id="datalistOptions">
+                    <option value="Group 01"></option>
+                    <option value="Group 02"></option>
+                    <option value="Group 03"></option>
+                    <option value="Group 04"></option>
+                    <option value="Group 05"></option>
+                    <option value="Group 06"></option>
+                    <option value="Group 07"></option>
+                    <option value="Group 08"></option>
+                    <option value="Group 09"></option>
+                    <option value="Group 10"></option>
+                  </datalist>
+                  <div
+                    *ngIf="
+                      (formAddEmployee.get('group')?.invalid &&
+                        formAddEmployee.get('group')?.touched) ||
+                      formAddEmployee.get('group')?.dirty
+                    "
+                  >
+                    <small
+                      *ngIf="formAddEmployee.get('group')?.errors?.['required']"
+                      class="text-danger"
+                      >Group is required !</small
+                    >
+                  </div>
+                  <!-- <div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      (keyup)="onSeachDropdownValue($event)"
+                      placeholder="Enter group"
+                      value="{{ data }}"
+                    />
+                    <div class="dropdown-selector">
+                      <div
+                        class="dropdown-selector-option"
+                        *ngFor="let option of searchedOptions"
+                        (click)="onSelectDropdownValue(option)"
+                      >
+                        {{ data == null ? option : "" }}
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="card-footer">
+                <button
+                  type="submit"
+                  [disabled]="!formAddEmployee.valid"
+                  class="btn btn-primary"
+                >
+                  Submit
+                </button>
+                <button
+                  type="submit"
+                  (click)="goEmployeePage()"
+                  class="btn btn-secondary ml-2"
+                >
+                  Back
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

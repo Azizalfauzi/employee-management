@@ -1,0 +1,132 @@
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Detail Employee Page</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Detail employee</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <form>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter username"
+                    value="{{ username }}"
+                    disabled
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter first name"
+                        value="{{ firstName }}"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label>Last Name</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Enter last name "
+                        value="{{ lastName }}"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter email address"
+                    value="{{ email }}"
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Birth Date</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Select birt date"
+                    value="{{ birthDate }}"
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Basic Salary</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter salary"
+                    value="{{ basicSalary | currency : 'IDR ' :'Rp.'  }}"
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Status</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter group"
+                    value="{{ status }}"
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Group</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter group"
+                    value="{{ group }}"
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Description</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter group"
+                    value="{{ description }}"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="card-footer">
+                <button
+                  type="submit"
+                  (click)="goEmployeePage()"
+                  class="btn btn-secondary ml-2"
+                >
+                  Back
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
